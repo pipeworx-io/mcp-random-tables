@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.pipeworx-io/random-tables",
+  "title": "Random Tables",
+  "description": "random-tables — Pipeworx original composable random tables for tabletop and narrative play…",
+  "version": "0.1.0",
+  "websiteUrl": "https://pipeworx.io/packs/random-tables",
+  "repository": {
+    "url": "https://github.com/pipeworx-io/mcp-random-tables",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://gateway.pipeworx.io/random-tables/mcp"
+    }
+  ]
+}
