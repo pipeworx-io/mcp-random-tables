@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-random-tables",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "random-tables — Pipeworx original composable random tables for tabletop and narrative play (encounters, loot, weather, complications, NPCs, plot hooks, tavern scenes, rumours, settlement quirks), plus caller-supplied custom tables.",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-random-tables": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "random-tables"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-random-tables.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/random-tables",
   "pipeworx": {
-    "sourceHash": "v1-d6cae5a59232f1648d3183cfadc07a7107a0c9ad72827b67777e898c3e2766ac",
-    "sourceCommit": "71f5325b13bb0ea0de2f0f7207885962ec91a484"
+    "mode": "gateway",
+    "slug": "random-tables",
+    "gatewaySlug": "random-tables",
+    "sourceHash": "v1-a7ccf5c4f890ed6776f186f9100858db8e5713d7c3047682fc630984d10d3133",
+    "sourceCommit": "6bae4cfa7b6a73bbe014dc8820a19c80c842b21e"
   }
 }
